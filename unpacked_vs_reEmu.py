@@ -36,6 +36,8 @@ def main():
     variables = ['tauEt', 'tauEta', 'tauPhi']
     for variable in variables: 
         data_unpacked = ak.flatten(tree_unpacked[variable].array())
+        tauBx         = ak.flatten(tree_unpacked['tauBx'].array())
+        data_unpacked = data_unpacked[tauBx == 0]
         data_reEmu    = ak.flatten(tree_reEmu[variable].array())
         plot_histogram(variable, data_unpacked, data_reEmu, args.tag)
 

@@ -38,3 +38,4 @@ cmsDriver.py l1Ntuple -s RAW2DIGI --python_filename=data.py -n 100 --no_output -
 cmsDriver.py l1Ntuple -s RAW2DIGI --python_filename=mc.py -n 100 --no_output --era=Run3 --mc --conditions=133X_mcRun3_2024_realistic_v8 --customise=L1Trigger/Configuration/customiseReEmul.L1TReEmulMCFromRAWSimHcalTP --customise=L1Trigger/L1TNtuples/customiseL1Ntuple.L1NtupleRAWEMUGEN_MC --customise=L1Trigger/Configuration/customiseSettings.L1TSettingsToCaloParams_2023_v0_4 --filein=/store/mc/Run3Winter24Digi/SingleNeutrino_Pt-2To20-gun/GEN-SIM-RAW/133X_mcRun3_2024_realistic_v8-v2/2540000/038bda40-23b3-4038-a546-6397626ae3e2.root
 ```
 
+Note that for a correct comparison we need to select only events where `tauBx == 0`. Since the RAW information is saved only for `tauBx == 0`, re-Emulation can be performed only in this case. On the contrary, the object information is saved in the range `-2 <= BX <= 2`. The script performs this selection automatically.

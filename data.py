@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: l1Ntuple -s RAW2DIGI --python_filename=data.py -n 100 --no_output --era=Run3 --data --conditions=130X_dataRun3_Prompt_v4 --customise=L1Trigger/Configuration/customiseReEmul.L1TReEmulFromRAW --customise=L1Trigger/L1TNtuples/customiseL1Ntuple.L1NtupleRAWEMU --customise=L1Trigger/Configuration/customiseSettings.L1TSettingsToCaloParams_2023_v0_4 --filein=/store/data/Run2022G/Muon/RAW/v1/000/362/439/00000/bae0c2c6-ab03-4753-a5e7-f31c531520bd.root
+# with command line options: l1Ntuple -s RAW2DIGI --python_filename=data.py -n 100 --no_output --era=Run3 --data --conditions=130X_dataRun3_Prompt_v4 --customise=L1Trigger/Configuration/customiseReEmul.L1TReEmulFromRAW --customise=L1Trigger/L1TNtuples/customiseL1Ntuple.L1NtupleRAWEMU --customise=L1Trigger/Configuration/customiseSettings.L1TSettingsToCaloParams_2023_v0_4 --filein=/store/data/Run2023D/EphemeralZeroBias0/RAW/v1/000/370/293/00000/0545057e-416f-49e0-8ffb-fdca37061d4e.root
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.Eras.Era_Run3_cff import Run3
@@ -27,7 +27,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/data/Run2022G/Muon/RAW/v1/000/362/439/00000/bae0c2c6-ab03-4753-a5e7-f31c531520bd.root'),
+    fileNames = cms.untracked.vstring('/store/data/Run2023D/EphemeralZeroBias0/RAW/v1/000/370/293/00000/0545057e-416f-49e0-8ffb-fdca37061d4e.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
